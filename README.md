@@ -2,18 +2,85 @@ README of PMC-BashBurn:
 =======================
 PMC-BashBurn is released under the GNU GPL v2
 
-This is a custom distribution of BashBurn 2.0
-including some Linux-cdgrab functionalities.
-Stable version (09-08-2017).
+This is a custom distribution of BashBurn 2.0 including some Linux-cdgrab functionalities.
+
+Based from original BashBurn 2.0 release made by Anders Linden.
+
+Uploaded to 2.1 ; Test version (22-04-2022).
 
 Pascual Martínez Cruz --> pascual89@hotmail.com
 
 CONSTRUCTION
 ============
 
-PMC-BashBurn 2.0 are delevoped from original BashBurn 2.0 sources.
+PMC-BashBurn 2.1 are developed from original BashBurn 2.0 sources.
 
-List of Modifications:
+List of Modifications v2.1:
+
+./CDMixed_menu.sh --> Support for Mixed CD, New menu file.
+		      Call burning.sh with new --mixcd option
+		      execute new cdmixto burning function.
+
+./func/bincuefunc.sh --> Support to generate bin/cue files from CD on unit burner 
+			 # From linux-cdgrab 0.5 r2 # PMC-INI # PMC-END
+
+./menus/BinCue_menu.sh --> Support to generate bin/cue files from CD.			 
+			   New menu file. Pascual Martínez Cruz
+			   Interface for manage the burn or generation of bin/cue files.
+
+./lang/English/bincue.lang --> Impact of BinCue_menu, English messages for menu.
+./lang/Spanish/bincue.lang --> Impact of BinCue_menu, Spanish messages for menu.
+
+./burning/burning.sh --> Support to burn DVD Video (DVD-9).
+			 dvd_video function implemented, from Linux-cdgrab-0.5 r2.
+			 Burns DVD-9 Video from harddisk files into DVD (DVD-R/+R/-RW/+RW)
+                         Support to burn Mixed CD, from linux-cdgrab-0.5r2
+			 Mixed CD (Data tracks + Audio Tracks).
+
+./lang/English/burning.lang --> Added languaje to dvd_video, from Linux-cdgrab-0.5 r2.
+./lang/Spanish/burning.lang --> Added languaje to dvd_video, from Linux-cdgrab-0.5 r2.
+
+./lang/English/PMCBashBurn.lang --> Option DVD-Video added, credits.
+./lang/Spanish/PMCBashBurn.lang --> Option DVD-Video added, credits.
+
+./menus/DVDVideo_menu.sh --> New menu file.
+			     Call burning.sh with new --dvdvideo option
+			     execute new dvd_video burning function.
+
+./PMCBashBurn.sh --> - Fix error of infinity loop in force_quit function,
+		     break command not works and program can execute a
+		     infinity loop, needs kill process to exit application.
+		     
+		     - Implemented new option to burn Mixed CD (Data + Audio Tracks)
+
+		     - Implemented new option to burn DVD-9 Video from hardrive files
+		     in DVD+R/RW and DVD-R/RW
+		     		     
+		     - Calls new bin/cue submenu.
+
+./func/isofunc.sh --> Extract iso-9660 img file from DVD; # From linux-cdgrab 0.5r2 #PMC-ini #PMC-end
+./lang/English/iso_menu.lang --> Impact of extraer_isoDVD_dd function # From linux-cdgrab 0.5r2
+./lang/Spanish/iso_menu.lang --> Impact of extraer_isoDVD_dd function # From linux-cdgrab 0.5r2
+./menus/iso_menu.sh --> New option to extrac iso-9660 image file from DVD data disk.
+
+./lang/English/commonfunctions.lang --> Impact of text_una_sola_grabadora function # From linux-cdgrab 0.5r2
+./lang/Spanish/commonfunctions.lang --> Impact of text_una_sola_grabadora function # From linux-cdgrab 0.5r2
+./misc/commonfunction.sh --> Implemented text_una_sola_grabadora function # From linux-cdgrab 0.5r2 # PMC-ini #PMC-end
+
+./menu/data_menu --> New option to copy data DVD. Implemented copy_data_dvd function; Copy DVD to DVD.
+./burning/burning.sh --> Implemented --dirdvdimage burning calling to execute growisofs directly. Function direct_dvd_image_burn
+
+./Install.sh --> Create hardlink of PMCBashBurn.sh, other fixes.
+./misc/check_path.sh --> Shows comands of the new functionalities.
+
+./howto --> Explanation of new options.
+./HOWTO --> Explanation of new options.
+./Changelog --> Changelog application file
+./README.PMC --> Of course, this file.
+
+Added erase_pmcbb.sh file, to erase a PMCBashBurn instalation.
+
+List of Modifications (v2.0 first release):
 
 ./burning/burning.sh --> # PMC ; Support to burn .ext2 images on CD or DVD (image is burned with cdrecord); #PMC-ext2-ini #PMC-ext2-end
 			 # PMC ; Changed growisofs call to burn iso images on DVD. #PMC-dvdburn-ini #PMC-dvdburn-end
@@ -96,6 +163,9 @@ List of Modifications:
 ./credits and CREDITS --> PMC; Edited text.
 
 ./ChangeLog --> PMC; Edited text.
+
+./TODO --> PMC; Not maintained file in PMC-BashBurn
+./todo --> PMC; Not maintained file in PMC-BashBurn
 
 ./README.PMC --> PMC; New readme .txt file for this release.
 
