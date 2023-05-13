@@ -3,10 +3,8 @@ README of PMC-BashBurn:
 PMC-BashBurn is released under the GNU GPL v2
 
 This is a custom distribution of BashBurn 2.0 including some Linux-cdgrab functionalities.
-
 Based from original BashBurn 2.0 release made by Anders Linden.
-
-Uploaded to 2.1 ; Test version (22-04-2022).
+Uploaded to 2.1 ; Stable (26-03-2023).
 
 Pascual Martínez Cruz --> pascual89@hotmail.com
 
@@ -36,6 +34,7 @@ List of Modifications v2.1:
 			 Burns DVD-9 Video from harddisk files into DVD (DVD-R/+R/-RW/+RW)
                          Support to burn Mixed CD, from linux-cdgrab-0.5r2
 			 Mixed CD (Data tracks + Audio Tracks).
+			 Capture error if no .iso files found in /tmp/burn burning iso image.
 
 ./lang/English/burning.lang --> Added languaje to dvd_video, from Linux-cdgrab-0.5 r2.
 ./lang/Spanish/burning.lang --> Added languaje to dvd_video, from Linux-cdgrab-0.5 r2.
@@ -50,12 +49,12 @@ List of Modifications v2.1:
 ./PMCBashBurn.sh --> - Fix error of infinity loop in force_quit function,
 		     break command not works and program can execute a
 		     infinity loop, needs kill process to exit application.
-		     
+
 		     - Implemented new option to burn Mixed CD (Data + Audio Tracks)
 
 		     - Implemented new option to burn DVD-9 Video from hardrive files
 		     in DVD+R/RW and DVD-R/RW
-		     		     
+		     
 		     - Calls new bin/cue submenu.
 
 ./func/isofunc.sh --> Extract iso-9660 img file from DVD; # From linux-cdgrab 0.5r2 #PMC-ini #PMC-end
