@@ -2,16 +2,109 @@ README of PMC-BashBurn:
 =======================
 PMC-BashBurn is released under the GNU GPL v2
 
-This is a custom distribution of BashBurn 2.0 including some Linux-cdgrab functionalities.
+Unofficial and independent distribution of BashBurn application.
+This is a custom distribution of BashBurn 2.0 including some 
+Linux-cdgrab application functionalities.
 Based from original BashBurn 2.0 release made by Anders Linden.
-Uploaded to 2.1 ; Stable (26-03-2023).
+Uploaded to 2.2 ; Stable (2024-07-31).
 
-Pascual MartÃ­nez Cruz --> pascual89@hotmail.com
+Pascual Martínez Cruz --> pascual89@hotmail.com
 
 CONSTRUCTION
 ============
 
-PMC-BashBurn 2.1 are developed from original BashBurn 2.0 sources.
+PMC-BashBurn 2.2 are developed from original BashBurn 2.0 sources.
+
+List of Modifications v2.2:
+
+./faq
+./FAQ --> Some questions/answers redacted.
+
+./install
+./INSTALL --> Small instructions, copy paste text from same file.
+
+./func/udffunc.sh --> New func file. Implements the UDF/Iso image creation.
+		      Code ported from linux-cdgrab 1.0
+
+./menus/udf_menu.sh --> New menu file. Implements new UDF menu.
+			Options of linux-cdgrab 1.0
+
+./lang/English/udf_menu.lang --> Impact of the change above.
+./lang/Spanish/udf_menu.lang --> Impact of the change above.
+
+./misc/check_path.sh --> Checks ffmpeg command.
+
+./menus/video_menu.sh --> New menu file. Implements new Video Menu.
+			  Options of linux-cdgrab 1.0
+
+./func/videofunc.sh --> New func file. Implements the processes to convert and treat video files.
+			Code from linux-cdgrab 1.0
+
+./misc/commands.idx --> Added ffmpeg command. For treatment of video files.
+
+./lang/English/video_menu.lang --> New lang file. Messages for video menu and processes.
+				   Code from linux-cdgrab 1.0
+./lang/Spanish/video_menu.lang --> New lang file. Messages for video menu and processes.
+				   Code from linux-cdgrab 1.0
+
+./PMCBasBurn.sh --> Added Video and UDF new options.
+
+./lang/English/PMCBasBurn.lang --> Impact of the change above.
+./lang/Spanish/PMCBasBurn.lang --> Impact of the change above.
+
+./func/datafunc.sh --> Implements the K3B 17.12.13 process to clone a data CD.
+		       Same process is available in linux-cdgrab 1.0
+
+./menus/data_menu.sh --> New option to clone data CD.
+
+./lang/English/data_menu.lang --> Impact of the change above.
+./lang/Spanish/data_menu.lang --> Impact of the change above.
+
+./func/bincuefunc.sh --> Implemented function to generate a .cue description file from .bin imagefile.
+			 Code from linux-cdgrab 1.0
+
+./menus/BinCue_menu.sh --> New option to Generate a .cue file from .bin imagefile.
+
+./lang/Spanish/bincue.lang
+./lang/English/bincue.lang --> Impact of the change above, from linux-cdgrab 1.0
+
+./menus/audio_menu.sh --> Changed old option Burn Xmms PlayList for
+                          Burn M3U playlist. Obtained some code from BashBurn 3.1.0 sources.
+			  Disabled option to burn audio directly (use pipeline burning).
+
+./lang/Spanish/audio_menu.lang
+./lang/English/audio_menu.lang --> Impact of the change above.
+
+./misc/m3u_read.sh --> Original file copied from BashBurn 3.1.0 sources.
+
+Renamed file ./misc/xmmsread.sh to ./misc/__xmmsread.sh
+
+./func/audiofunc.sh --> Copied new function convert_if_exist from BashBurn 3.1.0 sources.
+			Some bugfixes in create_mp3s_from_cd and rip functions -> Makes option 1.9 to be usable.
+
+./conver/convert_audio.sh --> Copied file from BashBurn 3.1.0 sources.
+
+./menus/data_menu.sh --> For fixing. Included expansion of iso_menu.lang file.
+
+./burning/burning.sh --> Fixed commands to burn Mixed CD and DVD data copy.
+			 Set -tao value in BBDTAO variable, audio_burning function.
+			 Small change in error message of iso_burning function.
+			 Support to burn files in /tmp/burn into CD UDF.
+			 Support to burn UDF image file.
+			 Disabled the pipeline audio burning.
+
+./func/isofunc.sh --> Fixed function to extract iso image from DVD.
+
+./lang/English/burning.lang --> Included one message.
+./lang/Spanish/burning.lang --> Included one message.
+
+./lang/English/PMCBashBurn.lang --> Changed version of program and credits.
+./lang/Spanish/PMCBashBurn.lang --> Changed version of program and credits.
+
+./howto --> Explanation of new options.
+./HOWTO --> Explanation of new options.
+./README.PMC --> Of course, this file.
+./Changelog --> Changelog application file.
 
 List of Modifications v2.1:
 
@@ -23,7 +116,7 @@ List of Modifications v2.1:
 			 # From linux-cdgrab 0.5 r2 # PMC-INI # PMC-END
 
 ./menus/BinCue_menu.sh --> Support to generate bin/cue files from CD.			 
-			   New menu file. Pascual MartÃ­nez Cruz
+			   New menu file. Pascual Martínez Cruz
 			   Interface for manage the burn or generation of bin/cue files.
 
 ./lang/English/bincue.lang --> Impact of BinCue_menu, English messages for menu.
@@ -169,3 +262,4 @@ List of Modifications (v2.0 first release):
 ./README.PMC --> PMC; New readme .txt file for this release.
 
 Thanks for use PMC-BashBurn.
+
