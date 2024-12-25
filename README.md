@@ -17,6 +17,19 @@ PMC-BashBurn 2.2 are developed from original BashBurn 2.0 sources.
 
 List of Modifications v2.2:
 
+./lang/Spanish/audio_menu.lang
+./lang/Spanish/configure.lang
+./lang/Spanish/loopback.lang
+./lang/Spanish/multi.lang
+./lang/Spanish/iso_menu.lang
+./lang/Spanish/datadefine.lang
+./lang/Spanish/burning.lang
+./lang/Spanish/DVDblank_menu.lang
+./lang/Spanish/bincue.lang --> (20-09-2024) Ortographic corrections, small fixes.
+
+./lang/Spanish/README
+./lang/Spanish/readme --> Small changes in description, impact of the changes above.
+
 ./faq
 ./FAQ --> Some questions/answers redacted.
 
